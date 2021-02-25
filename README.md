@@ -2,3 +2,4 @@
 
 Team Members:
 Troy Clarke
+Rich Korneisel
