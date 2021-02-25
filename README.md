@@ -9,9 +9,12 @@
 ### API
 [Open Charge](https://openchargemap.org/site/develop/api#POI)
 
+### Component Structure
+- App
+    - Header
+        - Nav
+    - Search
+    - Results
+        - ResultsList    
 
-Testing branching
-Testing Branch Again
 
-I didn't realize that Troy updated main! Oh no!
-I am finally contributing 
