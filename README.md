@@ -3,3 +3,4 @@
 Team Members:
 Troy Clarke
 Rich Korneisel
+Seth Chadwick
