@@ -1,4 +1,5 @@
 # Project-3
 
-Team Members:
-Troy Clarke
+### Team Members:
+- Troy Clarke
+- Seth Chadwick
