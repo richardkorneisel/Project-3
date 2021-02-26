@@ -1,14 +1,23 @@
-import Search from "./Search";
-import Results from "./Results";
+import React, { Component } from 'react';
+import Search from "../Search/Search";
+import Results from "../Results/Results";
 
 
-function Home(){
-    return (
-        <div className="home">
-            <div><Search/></div>
-            <div><Results/></div>
-        </div>
-    )
+export default class Home extends Component {
+    render() {
+        // console.log('home this.props:', this.props)
+
+        return (
+            <div className="home">
+                <div><Search
+                    addLat={this.props.addLat}
+                    addLon={this.props.addLon}
+                    addDistance={this.props.addDistance}
+                    getResults={this.props.getResults} {...this.props} 
+                /></div>
+                <div><Results /></div>
+            </div>
+        );
+    }
 }
 
-export default Home;
