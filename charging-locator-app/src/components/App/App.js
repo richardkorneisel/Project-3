@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import Header from '../Header/Header'
 import Search from '../Search/Search'
+import Home from '../Home/Home'
 import Results from '../Results/Results'
 
 
@@ -40,7 +41,7 @@ export default class App extends Component {
     console.log('distance:', this.state.distance)
   }
 
-  results = async() => {
+  getResults = async() => {
     const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=100&compact=true&verbose=false'
     let latVar = '&latitude=' + this.state.lat;
     let lonVar = '&longitude=' + this.state.lon;
@@ -50,29 +51,24 @@ export default class App extends Component {
         this.setState({
             results: response.data
           })
-          console.log('response', response)
+          // console.log('response', response)
         
-        console.log('this.state', this.state)    
+        // console.log('this.state', this.state)    
       }
 
   render() {
     
     return (
       <div className="App">
-        <Header/>
-        <Search /> 
-          <h2>Test Search Input</h2>
-          <input type='integer' placeholder='latitude' onChange={this.addLat} />
-          <br/>
-          <input type='integer' placeholder='longitude' onChange={this.addLon} />
-          <br/>
-          <input type='integer' placeholder='distance' onChange={this.addDistance} />
-          <br/>
-          <button onClick={this.results}>Check that this works!</button>
+        <Header />
         <Switch>
           <Route exact path='/' render={(routerProps) =>
-            <Home addLat={this.addLat} addLon={this.addLon} addDistance={this.addDistance} results={this.results} {...this.state} {...routerProps} />
-            }>
+            <Home
+              addLat={this.addLat}
+              addLon={this.addLon}
+              addDistance={this.addDistance}
+              getResults={this.getResults} {...this.state} {...routerProps} />
+          }>
           </Route>
         </Switch>
       </div>
