@@ -20,28 +20,28 @@ export default class App extends Component {
   }
 
   addLat = (event) => {
-    this.state({
+    this.setState({
       lat: event.target.value
     })
-    console.log('lat:',)
+    console.log('lat:', this.state.lat)
   }
   
   addLon = (event) => {
-    this.state({
+    this.setState({
       lon: event.target.value
     })
-    console.log('lon:',)
+    console.log('lon:', this.state.lon)
   }
   
   addDistance = (event) => {
-    this.state({
+    this.setState({
       distance: event.target.value
     })
-    console.log('distance:',)
+    console.log('distance:', this.state.distance)
   }
 
   results = async() => {
-    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
+    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=100&compact=true&verbose=false'
     let latVar = '&latitude=' + this.state.lat;
     let lonVar = '&longitude=' + this.state.lon;
     let distanceVar = '&distance=' + this.state.distance;
@@ -52,7 +52,7 @@ export default class App extends Component {
           })
           console.log('response', response)
         
-        console.log('this.state.results', this.state.results)    
+        console.log('this.state', this.state)    
       }
 
   render() {
@@ -62,17 +62,15 @@ export default class App extends Component {
         <Header/>
         <Search /> 
           <h2>Test Search Input</h2>
-          <input type='float' placeholder='latitude' onChange={this.addLat} />
+          <input type='integer' placeholder='latitude' onChange={this.addLat} />
           <br/>
-          <input type='float' placeholder='longitude' onChange={this.addLon} />
+          <input type='integer' placeholder='longitude' onChange={this.addLon} />
           <br/>
-          <input type='float' placeholder='distance' onChange={this.addDistance} />
+          <input type='integer' placeholder='distance' onChange={this.addDistance} />
           <br/>
           <button onClick={this.results}>Check that this works!</button>
 
         <Results/>
-
-        {/* <p>{this.results(41.8756,-87.6244,10)}</p> */}
 
       </div>
     );
