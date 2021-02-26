@@ -13,5 +13,13 @@ Creating an app that shows where the nearest EV charging stations are using data
 - Axios
 
 ### API
+
 [Open Charge Map](https://openchargemap.org/site/develop/api#POI)
 
+### Component Structure
+- App
+    - Header
+        - Nav
+    - Search
+    - Results
+        - ResultsList    
