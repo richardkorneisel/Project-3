@@ -69,9 +69,12 @@ export default class App extends Component {
           <input type='integer' placeholder='distance' onChange={this.addDistance} />
           <br/>
           <button onClick={this.results}>Check that this works!</button>
-
-        <Results/>
-
+        <Switch>
+          <Route exact path='/' render={(routerProps) =>
+            <Home addLat={this.addLat} addLon={this.addLon} addDistance={this.addDistance} results={this.results} {...this.state} {...routerProps} />
+            }>
+          </Route>
+        </Switch>
       </div>
     );
   }
