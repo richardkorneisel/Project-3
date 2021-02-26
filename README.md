@@ -1,13 +1,20 @@
 # Project-3
 
+Creating an app that shows where the nearest EV charging stations are using data from the Open Charge Map API. 
+
 ### Team Members:
 - Troy Clarke
 - Rich Korneisel
 - Seth Chadwick
 
+### Technologies Used
+- React
+- React Router
+- Axios
 
 ### API
-[Open Charge](https://openchargemap.org/site/develop/api#POI)
+
+[Open Charge Map](https://openchargemap.org/site/develop/api#POI)
 
 ### Component Structure
 - App
@@ -16,5 +23,3 @@
     - Search
     - Results
         - ResultsList    
-
-
