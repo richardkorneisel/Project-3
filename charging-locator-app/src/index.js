@@ -5,9 +5,11 @@ import './index.css';
 import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
+import data from './data/citydata.js'
+
 ReactDOM.render(
   <Router>
-    <App />
+    <App data={data}/>
   </Router>,
   document.getElementById('root')
 );
