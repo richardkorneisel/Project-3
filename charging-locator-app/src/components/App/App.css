@@ -1,6 +1,13 @@
 .App {
-  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.75in;
+  background-color: black;
 }
 a{
   text-decoration: none;
+  color: #F8F8F8;
+  /* border: 5px solid red; */
 }
