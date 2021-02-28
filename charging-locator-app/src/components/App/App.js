@@ -39,7 +39,7 @@ export default class App extends Component {
   }
 
   getResults = async() => {
-    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=100&compact=true&verbose=false'
+    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
     let latVar = '&latitude=' + this.state.lat;
     let lonVar = '&longitude=' + this.state.lon;
     let distanceVar = '&distance=' + this.state.distance;

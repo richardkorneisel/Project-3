@@ -1,13 +1,12 @@
 import './Results.css';
 import ResultsList from '../ResultsList/ResultsList'
 
-function Results() {
+export default function Results(props) {
+
     return (
-        <div>
-            <h1>Results Page</h1>
-            <ResultsList/>
+        <div className='Results'>
+            <h2>Results</h2>
+            <ResultsList results={props.results}/>
         </div>
     );
 }
-
-export default Results;
