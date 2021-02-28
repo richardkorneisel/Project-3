@@ -3,9 +3,7 @@ import {Switch, Route, Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import Header from '../Header/Header'
-import Search from '../Search/Search'
 import Home from '../Home/Home'
-
 
 export default class App extends Component {
   constructor() {
@@ -23,21 +21,21 @@ export default class App extends Component {
     this.setState({
       lat: event.target.value
     })
-    console.log('lat:', this.state.lat)
+    // console.log('lat:', this.state.lat)
   }
   
   addLon = (event) => {
     this.setState({
       lon: event.target.value
     })
-    console.log('lon:', this.state.lon)
+    // console.log('lon:', this.state.lon)
   }
   
   addDistance = (event) => {
     this.setState({
       distance: event.target.value
     })
-    console.log('distance:', this.state.distance)
+    // console.log('distance:', this.state.distance)
   }
 
   getResults = async() => {
@@ -47,37 +45,25 @@ export default class App extends Component {
     let distanceVar = '&distance=' + this.state.distance;
     
     let response = await axios.get(baseUrl + latVar + lonVar + distanceVar)
-        this.setState({
-            results: response.data
-          })
-          console.log('response', response)
-        
-        console.log('this.state', this.state)    
-      }
+    
+    this.setState({
+        results: response.data
+      })
+  }
 
   render() {
     
     return (
       <div className="App">
-        <Header/>
-        {/* <Search />  */}
-          {/* <h2>Test Search Input</h2>
-          <input type='integer' placeholder='latitude' onChange={this.addLat} />
-          <br/>
-          <input type='integer' placeholder='longitude' onChange={this.addLon} />
-          <br/>
-          <input type='integer' placeholder='distance' onChange={this.addDistance} />
-          <br/>
-          <button onClick={this.results}>Check that this works!</button> */}
+        <Header />
         <Switch>
           <Route exact path='/' render={(routerProps) =>
-            <Home 
-              addLat={this.addLat} 
-              addLon={this.addLon} 
-              addDistance={this.addDistance} 
-              getResults={this.getResults}
-              {...this.state} {...routerProps} />
-            }>
+            <Home
+              addLat={this.addLat}
+              addLon={this.addLon}
+              addDistance={this.addDistance}
+              getResults={this.getResults} {...this.state} {...routerProps} />
+          }>
           </Route>
         </Switch>
       </div>
