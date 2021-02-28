@@ -17,7 +17,7 @@ export default function ResultCard(props) {
       <div className='address'>
         <p>{address.AddressLine1}</p>
         <p>{address.Town}</p>
-        <p>{address.StateOrProvidence}</p>
+        <p>{address.StateOrProvince}</p>
         <p>{address.Postcode}</p>
       </div>
       <div className='details'>
