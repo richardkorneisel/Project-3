@@ -15,7 +15,10 @@ export default class App extends Component {
       lat: 41.8,
       lon: -87.6,
       fullUrl: "",
-      results: []
+      results: [],
+      location: "Cedar Falls, IA",
+      city: "",
+      state: ""
     }
   }
 
@@ -40,6 +43,20 @@ export default class App extends Component {
     // console.log('distance:', this.state.distance)
   }
 
+  addCity = (event) => {
+    this.setState({
+      city: event.target.value
+    })
+    // console.log('city:', this.state.city)
+  }
+
+  addState = (event) => {
+    this.setState({
+      state: event.target.value
+    })
+    // console.log('state:', this.state.state)
+  }
+
 
   getResults = async() => {
     const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
@@ -53,6 +70,20 @@ export default class App extends Component {
         results: response.data
       })
   }
+  
+  getLocation = async() => {
+    const baseUrl = 'http://open.mapquestapi.com/geocoding/v1/address?'
+    let keyVar = '&key=MzIQ3bSXuoSwGCLjXzaUVXn4e5lJMUSI';
+    let locationVar = '&location=' + this.state.location;
+        
+    let response = await axios.get(baseUrl + keyVar + locationVar)
+    console.log('Location response', response.data.results[0].locations[0].latLng.lat)
+    console.log('Location response', response.data.results[0].locations[0].latLng.lng)
+    this.setState({
+      lat: response.data.results[0].locations[0].latLng.lat,
+      lon: response.data.results[0].locations[0].latLng.lng
+      })
+  }
 
   render() {
     
@@ -62,22 +93,22 @@ export default class App extends Component {
         <Header />
         </div>
         <Switch>
-          {/* <Route exact path='/' render={(routerProps) =>
+          <Route exact path='/' render={(routerProps) =>
             <Home
-              // addLat={this.addLat}
-              // addLon={this.addLon}
-              // addDistance={this.addDistance}
-              // getResults={this.getResults} 
-              {...this.state} {...routerProps} 
-            />
-          }> */}
-          {/* </Route> */}
-          <Route exact path='/' render={ () => <Home {...this.props} />} />
+              addLat={this.addLat}
+              addLon={this.addLon}
+              addDistance={this.addDistance}
+              getResults={this.getResults} {...this.state} {...routerProps}
+              addCity={this.addCity}
+              addState={this.addState}
+              getLocation={this.getLocation}
+              />
+          }>
+          </Route>
           <Route path="/:id" component={AboutUs} />
-          {/* <Route path="/" component={Home} /> */}
-          
-
+          <Route path="/" component={Home} />
         </Switch>
+        <button onClick= {this.getLocation}>Click Here</button>
       </div>
     );
   }

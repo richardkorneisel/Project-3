@@ -7,7 +7,36 @@ export default class Search extends Component {
         return (
             <div className='container'>
                 <h2>Station Search</h2>
+
+                <h5>Search by City and State</h5>
                 <div className='searchContainer'>
+
+
+                    <div className='city'>
+                        <p>Enter City</p>
+                        <input type='integer' placeholder='city' onChange={this.props.addLat} />
+                    </div>
+
+                    <div className='state'>
+                        <p>Enter State</p>
+                        <input type='integer' placeholder='state' onChange={this.props.addLat} />
+                    </div>
+
+                    <div className='dist'>
+                        <p>Enter dististance</p>
+                        <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
+                    </div>
+
+                </div>
+
+                <div className='button'>
+                        <button onClick={this.props.getResults}>Submit Request</button>
+                </div>
+                    
+                <h2 className="or">OR</h2>
+                <h5>Search by latitiude and longitude</h5>
+
+                <div className="searchContainer">
                     <div className='lat'>
                         <p>Enter latitude</p>
                         <input type='integer' placeholder='latitude' onChange={this.props.addLat} />
@@ -24,6 +53,7 @@ export default class Search extends Component {
                 <div className='button'>
                     <button onClick={this.props.getResults}>Submit Request</button>
                 </div>
+
             </div>
         );
     }
