@@ -10,9 +10,9 @@ export default class Home extends Component {
             <div className="home">
                 <div><Search
 
-                    // addLat={this.props.addLat}
-                    // addLon={this.props.addLon}
-                    // addDistance={this.props.addDistance}
+                    addLat={this.props.addLat}
+                    addLon={this.props.addLon}
+                    addDistance={this.props.addDistance}
                     getResults={this.props.getResults} 
                     getLocation={this.props.getLocation}
                     {...this.props} 

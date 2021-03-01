@@ -5,17 +5,17 @@ export default function ResultsList(props) {
 
     console.log('ResultsList props', props)
 
-    // let resultCards = props.results.map((value, index) => {
-    //     return (
-    //         <ResultCard value={value} index={index} />
-    //     )
-    // })
+    let resultCards = props.results.map((value, index) => {
+        return (
+            <ResultCard value={value} index={index} />
+        )
+    })
 
     return (
         <div className='ResultsList'>
             <h1>ResultsList</h1>
             <div className='ResultCards'>
-                {/* {resultCards} */}
+                {resultCards}
             </div>
         </div>
     );
