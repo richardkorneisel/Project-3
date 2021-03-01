@@ -56,8 +56,10 @@ export default class App extends Component {
   render() {
     
     return (
-      <div className="App">
+      <div className="app">
+        <div className="header">
         <Header />
+        </div>
         <Switch>
           <Route exact path='/' render={(routerProps) =>
             <Home
@@ -68,6 +70,8 @@ export default class App extends Component {
           }>
           </Route>
           <Route path="/:id" component={AboutUs} />
+          <Route path="/" component={Home} />
+          
 
         </Switch>
       </div>
