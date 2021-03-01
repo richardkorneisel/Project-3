@@ -14,28 +14,24 @@ export default class Search extends Component {
 
                     <div className='city'>
                         <p>Enter City</p>
-                        <input type='text' placeholder='city' onChange={this.props.addCity} />
+                        <input type='text' placeholder="Chicago" onChange={this.props.addCity} />
                     </div>
 
                     <div className='state'>
                         <p>Enter State</p>
-                        <input type='text' placeholder='state' onChange={this.props.addState} />
+                        <input type='text' placeholder="IL or Illinois" onChange={this.props.addState} />
                     </div>
 
                     <div className='dist'>
                         <p>Enter distance</p>
-                        <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
+                        <input type='integer' placeholder="25" onChange={this.props.addDistance} />
                     </div>
 
                 </div>
-
                 <div className='button'>
-<<<<<<< HEAD
-                        <button onClick={this.props.getLocation}>Get Coordinates</button>
-=======
-                        <button onClick={this.props.getLocation}>Submit Request</button>
->>>>>>> main
+                        <button onClick={this.props.getLocation}>Search</button>
                 </div>
+
                     
                 <h2 className="or">OR</h2>
                 <h5>Search by latitiude and longitude</h5>
@@ -43,19 +39,19 @@ export default class Search extends Component {
                 <div className="searchContainer">
                     <div className='lat'>
                         <p>Enter latitude</p>
-                        <input type='integer' placeholder='latitude' onChange={this.props.addLat} />
+                        <input type='integer' placeholder={this.props.lat} onChange={this.props.addLat} />
                     </div>
                     <div className='lon'>
                         <p>Enter longitude</p>
-                        <input type='integer' placeholder='longitude' onChange={this.props.addLon} />
+                        <input type='integer' placeholder={this.props.lon} onChange={this.props.addLon} />
                     </div>
                     <div className='dist'>
                         <p>Enter distance</p>
-                        <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
+                        <input type='integer' placeholder={this.props.distance} onChange={this.props.addDistance} />
                     </div>
                 </div>
                 <div className='button'>
-                    <button onClick={this.props.getResults}>Submit Request</button>
+                    <button onClick={this.props.getResults}>Search</button>
                 </div>
 
             </div>

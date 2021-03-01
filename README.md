@@ -14,7 +14,10 @@ Creating an app that shows where the nearest EV charging stations are using data
 
 ### API
 
-[Open Charge Map](https://openchargemap.org/site/develop/api#POI)
+[Open Charge Map](https://openchargemap.org/site/develop/api)
+
+[Open Geocoding API](https://developer.mapquest.com/documentation/open/geocoding-api/)
+
 
 ### Component Structure
 - App
@@ -26,3 +29,7 @@ Creating an app that shows where the nearest EV charging stations are using data
             - ResultsList    
                 - Result
     - About Us
+
+### User Stories
+
+[See User Stories Here](./user-stories.md)

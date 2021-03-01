@@ -16,13 +16,8 @@ export default class App extends Component {
       lon: -87.6,
       fullUrl: "",
       results: [],
-<<<<<<< HEAD
       city: "Chicago",
       state: "IL"
-=======
-      city: "",
-      state: ""
->>>>>>> main
     }
   }
 
