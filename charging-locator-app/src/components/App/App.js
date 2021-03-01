@@ -15,7 +15,8 @@ export default class App extends Component {
       lat: 41.8,
       lon: -87.6,
       fullUrl: "",
-      results: []
+      results: [],
+      location: "Cedar Falls, IA",
     }
   }
 
@@ -52,6 +53,20 @@ export default class App extends Component {
         results: response.data
       })
   }
+  
+  getLocation = async() => {
+    const baseUrl = 'http://open.mapquestapi.com/geocoding/v1/address?'
+    let keyVar = '&key=MzIQ3bSXuoSwGCLjXzaUVXn4e5lJMUSI';
+    let locationVar = '&location=' + this.state.location;
+        
+    let response = await axios.get(baseUrl + keyVar + locationVar)
+    console.log('Location response', response.data.results[0].locations[0].latLng.lat)
+    console.log('Location response', response.data.results[0].locations[0].latLng.lng)
+    this.setState({
+      lat: response.data.results[0].locations[0].latLng.lat,
+      lon: response.data.results[0].locations[0].latLng.lng
+      })
+  }
 
   render() {
     
@@ -71,9 +86,8 @@ export default class App extends Component {
           </Route>
           <Route path="/:id" component={AboutUs} />
           <Route path="/" component={Home} />
-          
-
         </Switch>
+        <button onClick= {this.getLocation}>Click Here</button>
       </div>
     );
   }
