@@ -13,7 +13,8 @@ export default class Home extends Component {
                     // addLat={this.props.addLat}
                     // addLon={this.props.addLon}
                     // addDistance={this.props.addDistance}
-                    getResults={this.props.getResults} {...this.props} 
+                    getResults={this.props.getResults} {...this.props}
+                    getLocation={this.props.getLocation} {...this.props}
                 /></div>
                 <div><Results {...this.props}/></div>
             </div>

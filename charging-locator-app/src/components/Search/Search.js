@@ -14,23 +14,23 @@ export default class Search extends Component {
 
                     <div className='city'>
                         <p>Enter City</p>
-                        <input type='integer' placeholder='city' onChange={this.props.addLat} />
+                        <input type='text' placeholder='city' onChange={this.props.addCity} />
                     </div>
 
                     <div className='state'>
                         <p>Enter State</p>
-                        <input type='integer' placeholder='state' onChange={this.props.addLat} />
+                        <input type='text' placeholder='state' onChange={this.props.addState} />
                     </div>
 
                     <div className='dist'>
-                        <p>Enter dististance</p>
+                        <p>Enter distance</p>
                         <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
                     </div>
 
                 </div>
 
                 <div className='button'>
-                        <button onClick={this.props.getResults}>Submit Request</button>
+                        <button onClick={this.props.getLocation}>Submit Request</button>
                 </div>
                     
                 <h2 className="or">OR</h2>
@@ -46,7 +46,7 @@ export default class Search extends Component {
                         <input type='integer' placeholder='longitude' onChange={this.props.addLon} />
                     </div>
                     <div className='dist'>
-                        <p>Enter dististance</p>
+                        <p>Enter distance</p>
                         <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
                     </div>
                 </div>
