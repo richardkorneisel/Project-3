@@ -17,6 +17,8 @@ export default class App extends Component {
       fullUrl: "",
       results: [],
       location: "Cedar Falls, IA",
+      city: "",
+      state: ""
     }
   }
 
@@ -40,6 +42,21 @@ export default class App extends Component {
     })
     // console.log('distance:', this.state.distance)
   }
+
+  addCity = (event) => {
+    this.setState({
+      city: event.target.value
+    })
+    // console.log('city:', this.state.city)
+  }
+
+  addState = (event) => {
+    this.setState({
+      state: event.target.value
+    })
+    // console.log('state:', this.state.state)
+  }
+
 
   getResults = async() => {
     const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
@@ -81,7 +98,11 @@ export default class App extends Component {
               addLat={this.addLat}
               addLon={this.addLon}
               addDistance={this.addDistance}
-              getResults={this.getResults} {...this.state} {...routerProps} />
+              getResults={this.getResults} {...this.state} {...routerProps}
+              addCity={this.addCity}
+              addState={this.addState}
+              getLocation={this.getLocation} {...this.state} {...routerProps} 
+              />
           }>
           </Route>
           <Route path="/:id" component={AboutUs} />
