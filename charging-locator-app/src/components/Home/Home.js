@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Search from "../Search/Search";
 import Results from "../Results/Results";
-
+import './Home.css';
 
 export default class Home extends Component {
     render() {

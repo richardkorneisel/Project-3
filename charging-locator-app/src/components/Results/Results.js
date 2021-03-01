@@ -3,8 +3,8 @@ import ResultsList from '../ResultsList/ResultsList'
 
 function Results() {
     return (
-        <div>
-            <h1>Results Page</h1>
+        <div className= 'resultsContainer'>
+            <h2>Search Results</h2>
             <ResultsList/>
         </div>
     );
