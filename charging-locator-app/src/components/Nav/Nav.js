@@ -1,10 +1,11 @@
+import React, { Component } from 'react';
+import { Route, Link, Switch, Redirect } from "react-router-dom";
 import './Nav.css';
 
 function Nav() {
     return (
         <div>
-            <p><a href="about-us">About Us</a></p>
-            <p><a href="directions">Directions</a></p>
+            <p><a href="AboutUs">About Us</a></p>
         </div>
     );
 }

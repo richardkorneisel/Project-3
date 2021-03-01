@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import Search from '../Search/Search'
 import Home from '../Home/Home'
 import Results from '../Results/Results'
+import AboutUs from '../AboutUs/AboutUs'
 
 
 export default class App extends Component {
@@ -70,6 +71,8 @@ export default class App extends Component {
               getResults={this.getResults} {...this.state} {...routerProps} />
           }>
           </Route>
+          <Route path="/:id" component={AboutUs} />
+
         </Switch>
       </div>
     );
