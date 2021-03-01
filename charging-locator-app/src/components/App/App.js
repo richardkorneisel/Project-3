@@ -4,6 +4,8 @@ import axios from 'axios';
 import './App.css';
 import Header from '../Header/Header'
 import Home from '../Home/Home'
+import AboutUs from '../AboutUs/AboutUs'
+
 
 export default class App extends Component {
   constructor() {
@@ -65,6 +67,8 @@ export default class App extends Component {
               getResults={this.getResults} {...this.state} {...routerProps} />
           }>
           </Route>
+          <Route path="/:id" component={AboutUs} />
+
         </Switch>
       </div>
     );

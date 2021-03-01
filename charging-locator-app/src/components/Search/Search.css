@@ -1,0 +1,29 @@
+p {
+    font-size: 10px;
+    font-weight: 600;
+}
+input {
+    box-sizing: border-box;
+    padding: 6px 10px;
+    margin: 0 15px 0 0 ;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0  40px 40px;
+}
+.searchContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+ @media (max-width: 576px) {
+
+    .searchContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+ }
+.button {
+    padding: 20px 0 20px 0;
+}
