@@ -40,6 +40,7 @@ export default class App extends Component {
     // console.log('distance:', this.state.distance)
   }
 
+
   getResults = async() => {
     const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
     let latVar = '&latitude=' + this.state.lat;
@@ -61,16 +62,19 @@ export default class App extends Component {
         <Header />
         </div>
         <Switch>
-          <Route exact path='/' render={(routerProps) =>
+          {/* <Route exact path='/' render={(routerProps) =>
             <Home
-              addLat={this.addLat}
-              addLon={this.addLon}
-              addDistance={this.addDistance}
-              getResults={this.getResults} {...this.state} {...routerProps} />
-          }>
-          </Route>
+              // addLat={this.addLat}
+              // addLon={this.addLon}
+              // addDistance={this.addDistance}
+              // getResults={this.getResults} 
+              {...this.state} {...routerProps} 
+            />
+          }> */}
+          {/* </Route> */}
+          <Route exact path='/' render={ () => <Home {...this.props} />} />
           <Route path="/:id" component={AboutUs} />
-          <Route path="/" component={Home} />
+          {/* <Route path="/" component={Home} /> */}
           
 
         </Switch>

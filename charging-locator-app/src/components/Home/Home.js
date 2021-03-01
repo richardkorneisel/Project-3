@@ -5,7 +5,7 @@ import './Home.css';
 
 export default class Home extends Component {
     render() {
-
+        console.log('Home this.props', this.props)
         return (
             <div className="home">
                 <div><Search
