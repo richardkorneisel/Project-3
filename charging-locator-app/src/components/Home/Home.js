@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import Search from "../Search/Search";
 import Results from "../Results/Results";
-
+import './Home.css';
 
 export default class Home extends Component {
     render() {
-        // console.log('home this.props:', this.props)
 
         return (
             <div className="home">
@@ -15,7 +14,7 @@ export default class Home extends Component {
                     addDistance={this.props.addDistance}
                     getResults={this.props.getResults} {...this.props} 
                 /></div>
-                <div><Results /></div>
+                <div><Results {...this.props}/></div>
             </div>
         );
     }

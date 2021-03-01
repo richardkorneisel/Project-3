@@ -1,0 +1,31 @@
+.ResultCard {
+  background-color: rgb(171, 241, 171);
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  text-align: left;
+}
+
+.ResultCard p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.ResultCard .details {
+  margin-top: 20px;
+}
+
+.ResultCard .details p {
+  margin-bottom: 10px;
+}
+
+.ResultCard .button {
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  background-color:  gray;
+  height: 26px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
