@@ -14,7 +14,7 @@ export default class Home extends Component {
                     addDistance={this.props.addDistance}
                     getResults={this.props.getResults} {...this.props} 
                 /></div>
-                <div><Results results={this.props}/></div>
+                <div><Results {...this.props}/></div>
             </div>
         );
     }
