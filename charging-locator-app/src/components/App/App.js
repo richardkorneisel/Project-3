@@ -3,9 +3,7 @@ import {Switch, Route, Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 import Header from '../Header/Header'
-import Search from '../Search/Search'
 import Home from '../Home/Home'
-import Results from '../Results/Results'
 import AboutUs from '../AboutUs/AboutUs'
 
 
@@ -25,37 +23,35 @@ export default class App extends Component {
     this.setState({
       lat: event.target.value
     })
-    console.log('lat:', this.state.lat)
+    // console.log('lat:', this.state.lat)
   }
   
   addLon = (event) => {
     this.setState({
       lon: event.target.value
     })
-    console.log('lon:', this.state.lon)
+    // console.log('lon:', this.state.lon)
   }
   
   addDistance = (event) => {
     this.setState({
       distance: event.target.value
     })
-    console.log('distance:', this.state.distance)
+    // console.log('distance:', this.state.distance)
   }
 
   getResults = async() => {
-    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=100&compact=true&verbose=false'
+    const baseUrl = 'https://api.openchargemap.io/v3/poi/?output=json&maxresults=10&compact=true&verbose=false'
     let latVar = '&latitude=' + this.state.lat;
     let lonVar = '&longitude=' + this.state.lon;
     let distanceVar = '&distance=' + this.state.distance;
     
     let response = await axios.get(baseUrl + latVar + lonVar + distanceVar)
-        this.setState({
-            results: response.data
-          })
-          // console.log('response', response)
-        
-        // console.log('this.state', this.state)    
-      }
+    
+    this.setState({
+        results: response.data
+      })
+  }
 
   render() {
     

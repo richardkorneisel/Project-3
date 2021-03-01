@@ -20,8 +20,9 @@ Creating an app that shows where the nearest EV charging stations are using data
 - App
     - Header
         - Nav
-    - Home
+    - Home 
         - Search
         - Results
-            - ResultsList 
-    - AboutUs   
+            - ResultsList    
+                - Result
+    - About Us

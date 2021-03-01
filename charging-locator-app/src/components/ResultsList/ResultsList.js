@@ -1,10 +1,22 @@
 import './ResultsList.css';
+import ResultCard from '../ResultCard/ResultCard'
 
-function ResultsList() {
+export default function ResultsList(props) {
+
+    console.log('ResultsList props', props)
+
+    let resultCards = props.results.map((value, index) => {
+        return (
+            <ResultCard value={value} index={index} />
+        )
+    })
+
     return (
-        <div>
-            <h2>ResultsList</h2>
+        <div className='ResultsList'>
+            <h1>ResultsList</h1>
+            <div className='ResultCards'>
+                {resultCards}
+            </div>
         </div>
     );
 }
-export default ResultsList;
