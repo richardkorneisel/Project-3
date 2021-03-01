@@ -32,4 +32,4 @@ Creating an app that shows where the nearest EV charging stations are using data
 
 ### User Stories
 
-[See User Stories Here](./user-stories.md)
+[See User Stories Here](.planning/user-stories.md)
