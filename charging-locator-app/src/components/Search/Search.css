@@ -11,6 +11,7 @@ input {
     display: flex;
     flex-direction: column;
     padding: 90px 0  40px 40px;
+    margin: 0 auto;
 }
 .searchContainer {
     display: flex;

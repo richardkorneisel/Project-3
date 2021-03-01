@@ -16,8 +16,8 @@ export default class App extends Component {
       lon: -87.6,
       fullUrl: "",
       results: [],
-      city: "",
-      state: ""
+      city: "Chicago",
+      state: "IL"
     }
   }
 
@@ -76,8 +76,8 @@ export default class App extends Component {
     let locationVar = '&location=' + this.state.city + "," + this.state.state;
         
     let response = await axios.get(baseUrl + keyVar + locationVar)
-    console.log('Location response', response.data.results[0].locations[0].latLng.lat)
-    console.log('Location response', response.data.results[0].locations[0].latLng.lng)
+    console.log('Location response', response)
+
     this.setState({
       lat: response.data.results[0].locations[0].latLng.lat,
       lon: response.data.results[0].locations[0].latLng.lng
@@ -104,12 +104,12 @@ export default class App extends Component {
               getResults={this.getResults} {...this.state} {...routerProps}
               addCity={this.addCity}
               addState={this.addState}
-              getLocation={this.getLocation} {...this.state} {...routerProps} 
+              getLocation={this.getLocation}
               />
           }>
           </Route>
           <Route path="/:id" component={AboutUs} />
-          <Route path="/" component={Home} />
+          {/* <Route path="/" component={Home} /> */}
         </Switch>
 
       </div>

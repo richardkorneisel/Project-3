@@ -2,14 +2,14 @@ import './ResultCard.css';
 
 export default function ResultCard(props) {
 
-  console.log('result props.value', props.value)
-  console.log('result props.index', props.index)
+  // console.log('result props.value', props.value)
+  // console.log('result props.index', props.index)
 
   const address = props.value.AddressInfo;
 
   const distance = (Math.round(address.Distance * 10) / 10).toFixed(1);
 
-  console.log('distance', distance)
+  // console.log('distance', distance)
 
   return (
     <div className='ResultCard'>
