@@ -4,6 +4,7 @@ import './Nav.css';
 
 function Nav() {
     return (
+
         <div>
             <p><a href="AboutUs">About Us</a></p>
         </div>
