@@ -30,7 +30,11 @@ export default class Search extends Component {
                 </div>
 
                 <div className='button'>
+<<<<<<< HEAD
                         <button onClick={this.props.getLocation}>Get Coordinates</button>
+=======
+                        <button onClick={this.props.getLocation}>Submit Request</button>
+>>>>>>> main
                 </div>
                     
                 <h2 className="or">OR</h2>
@@ -46,7 +50,7 @@ export default class Search extends Component {
                         <input type='integer' placeholder='longitude' onChange={this.props.addLon} />
                     </div>
                     <div className='dist'>
-                        <p>Enter dististance</p>
+                        <p>Enter distance</p>
                         <input type='integer' placeholder='distance' onChange={this.props.addDistance} />
                     </div>
                 </div>

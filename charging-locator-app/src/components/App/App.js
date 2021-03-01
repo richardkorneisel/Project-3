@@ -16,8 +16,13 @@ export default class App extends Component {
       lon: -87.6,
       fullUrl: "",
       results: [],
+<<<<<<< HEAD
       city: "Chicago",
       state: "IL"
+=======
+      city: "",
+      state: ""
+>>>>>>> main
     }
   }
 
@@ -46,14 +51,14 @@ export default class App extends Component {
     this.setState({
       city: event.target.value
     })
-    // console.log('city:', this.state.city)
+     console.log('city:', this.state.city)
   }
 
   addState = (event) => {
     this.setState({
       state: event.target.value
     })
-    // console.log('state:', this.state.state)
+     console.log('state:', this.state.state)
   }
 
 
@@ -86,6 +91,8 @@ export default class App extends Component {
     this.getResults();
   }
 
+
+
   render() {
     
     return (
@@ -109,7 +116,7 @@ export default class App extends Component {
           <Route path="/:id" component={AboutUs} />
           {/* <Route path="/" component={Home} /> */}
         </Switch>
-        <button onClick= {this.getLocation}>Click Here</button>
+
       </div>
     );
   }
