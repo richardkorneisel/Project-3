@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Search.css';
 import Button from 'react-bootstrap/Button';
 
-import Button from 'react-bootstrap/Button'
-
 
 export default class Search extends Component {
     render() {
