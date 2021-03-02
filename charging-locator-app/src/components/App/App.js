@@ -5,6 +5,7 @@ import './App.css';
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 import AboutUs from '../AboutUs/AboutUs'
+import Detail from '../Detail/Detail'
 
 
 export default class App extends Component {
@@ -46,14 +47,14 @@ export default class App extends Component {
     this.setState({
       city: event.target.value
     })
-     console.log('city:', this.state.city)
+    //  console.log('city:', this.state.city)
   }
 
   addState = (event) => {
     this.setState({
       state: event.target.value
     })
-     console.log('state:', this.state.state)
+    //  console.log('state:', this.state.state)
   }
 
 
@@ -76,7 +77,7 @@ export default class App extends Component {
     let locationVar = '&location=' + this.state.city + "," + this.state.state;
         
     let response = await axios.get(baseUrl + keyVar + locationVar)
-    console.log('Location response', response)
+    // console.log('Location response', response)
 
     this.setState({
       lat: response.data.results[0].locations[0].latLng.lat,
@@ -108,8 +109,10 @@ export default class App extends Component {
               />
           }>
           </Route>
-          <Route path="/:id" component={AboutUs} />
-          {/* <Route path="/" component={Home} /> */}
+          <Route path="/aboutus" component={AboutUs} />
+          <Route path='/detail/:id' render={routerProps => 
+            <Detail {...routerProps} results={this.state.results} /> 
+          } />
         </Switch>
 
       </div>
