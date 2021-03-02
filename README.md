@@ -33,3 +33,8 @@ Creating an app that shows where the nearest EV charging stations are using data
 ### User Stories
 
 [See User Stories Here](/planning/user-stories.md)
+
+
+### Future Improvements
+- Add error checking for state abbreviations. Ex. 'milan, IL' returns the city of Milan, Italy instead of Milan, Illinois. If 'il' is entered, lower case, Milan, Illinois is returned. 
+- Hitting refresh on Detail page clears out the search results. 
