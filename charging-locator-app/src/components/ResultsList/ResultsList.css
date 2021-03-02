@@ -5,3 +5,7 @@
   margin: 0 auto;
   width: 90%;
 }
+
+.ResultsList h1 {
+  font-size: 30px;
+}
