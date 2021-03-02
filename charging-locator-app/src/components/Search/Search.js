@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import Button from 'react-bootstrap/Button';
 
 export default class Search extends Component {
     render() {
@@ -20,7 +21,7 @@ export default class Search extends Component {
 
                         <div className='state'>
                             <p>Enter State</p>
-                            <input type='text' placeholder="IL or Illinois" onChange={this.props.addState} />
+                            <input type='text' placeholder="Illinois" onChange={this.props.addState} />
                         </div>
 
                         <div className='dist'>
@@ -30,7 +31,7 @@ export default class Search extends Component {
 
                     </div>
                     <div className='button'>
-                        <button onClick={this.props.getLocation}>Search</button>
+                        <Button variant="secondary" onClick={this.props.getLocation}>Search</Button>{' '}
                     </div>
                 </div>
                 <h2 className="or">OR</h2>
@@ -53,7 +54,7 @@ export default class Search extends Component {
                         </div>
                     </div>
                     <div className='button'>
-                        <button onClick={this.props.getResults}>Search</button>
+                        <Button variant="secondary" onClick={this.props.getResults}>Search</Button>{' '}
                     </div>
                 </div>
             </div>
