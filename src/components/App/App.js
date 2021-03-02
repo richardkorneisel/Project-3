@@ -77,7 +77,7 @@ export default class App extends Component {
     let locationVar = '&location=' + this.state.city + "," + this.state.state;
         
     let response = await axios.get(baseUrl + keyVar + locationVar)
-    // console.log('Location response', response)
+    console.log('Location response', response)
 
     this.setState({
       lat: response.data.results[0].locations[0].latLng.lat,

@@ -13,7 +13,7 @@ export default function ResultsList(props) {
 
     return (
         <div className='ResultsList'>
-            <h1>ResultsList</h1>
+            <h1>Results List</h1>
             <div className='ResultCards'>
                 {resultCards}
             </div>

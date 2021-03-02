@@ -16,7 +16,7 @@ export default function Detail(props) {
   let distance = "";
   let connections = {};
 
-  if (stationData !== undefined) {
+  if (stationData) {
     address = stationData.AddressInfo;
     distance = (Math.round(address.Distance * 10) / 10).toFixed(1);
     connections = stationData.Connections[0];
@@ -48,11 +48,11 @@ export default function Detail(props) {
             <p>Amps: {connections.Amps}</p>
             <p>Power (KW): {connections.PowerKW}</p>
           </div>
-        </div>
-      : null }
       <Link to='/'>
         <h3 className='button'>Back to Results</h3>
       </Link>
+        </div>
+      : null }
     </div>
   )
 }
