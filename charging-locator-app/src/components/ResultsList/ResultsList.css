@@ -1,5 +1,5 @@
 .ResultCards {
-  background-color: rgb(248, 223, 190);
+  background-color: darkgray;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;

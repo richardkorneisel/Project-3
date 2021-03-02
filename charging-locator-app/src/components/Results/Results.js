@@ -6,7 +6,7 @@ export default function Results(props) {
     // console.log('Results props:', props)
     return (
         <div className='Results'>
-            <h2>Results</h2>
+            
             <ResultsList {...props}/>
         </div>
     );

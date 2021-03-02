@@ -5,7 +5,7 @@ import './Nav.css';
 function Nav() {
     return (
 
-        <div className='aboutUs'>
+        <div className='nav'>
             <p><a href="AboutUs">About Us</a></p>
         </div>
     );
