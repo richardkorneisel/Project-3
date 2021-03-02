@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Search.css';
+import Button from 'react-bootstrap/Button';
 
 import Button from 'react-bootstrap/Button'
 
@@ -34,7 +35,9 @@ export default class Search extends Component {
 
                     </div>
                     <div className='button'>
-                        <Button variant='secondary' onClick={this.props.getLocation}>Search</Button>
+
+                        <Button variant="secondary" onClick={this.props.getLocation}>Search</Button>{' '}
+
                     </div>
                 </div>
                 <h2 className="or">OR</h2>
@@ -57,7 +60,9 @@ export default class Search extends Component {
                         </div>
                     </div>
                     <div className='button'>
-                        <Button variant='secondary' onClick={this.props.getResults}>Search</Button>
+
+                        <Button variant="secondary" onClick={this.props.getResults}>Search</Button>{' '}
+
                     </div>
                 </div>
             </div>
