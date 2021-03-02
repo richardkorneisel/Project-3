@@ -33,7 +33,9 @@ export default class Search extends Component {
 
                     </div>
                     <div className='button'>
+
                         <Button variant="secondary" onClick={this.props.getLocation}>Search</Button>{' '}
+
                     </div>
                 </div>
                 <h2 className="or">OR</h2>
@@ -56,7 +58,9 @@ export default class Search extends Component {
                         </div>
                     </div>
                     <div className='button'>
+
                         <Button variant="secondary" onClick={this.props.getResults}>Search</Button>{' '}
+
                     </div>
                 </div>
             </div>
