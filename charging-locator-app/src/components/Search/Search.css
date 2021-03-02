@@ -13,11 +13,17 @@ input {
     padding: 90px 0  40px 40px;
     margin: 0 auto;
 }
+.searchWindow {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 0 0 0 30px;
+    margin-right: 30px;
+}
 .searchContainer {
     display: flex;
     justify-content: flex-start;
 }
- @media (max-width: 576px) {
+ @media (max-width: 654px) {
 
     .searchContainer {
         display: flex;

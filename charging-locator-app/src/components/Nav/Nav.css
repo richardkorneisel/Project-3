@@ -1,5 +1,8 @@
-.aboutUs {
+.nav {
     position: absolute;
     top: 50px;
     right: 100px;
+}
+.nav p {
+    font-size: 15px;
 }
