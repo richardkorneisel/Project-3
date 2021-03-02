@@ -72,7 +72,7 @@ export default class App extends Component {
   }
   
   getLocation = async() => {
-    const baseUrl = 'http://open.mapquestapi.com/geocoding/v1/address?'
+    const baseUrl = 'https://open.mapquestapi.com/geocoding/v1/address?'
     let keyVar = '&key=MzIQ3bSXuoSwGCLjXzaUVXn4e5lJMUSI';
     let locationVar = '&location=' + this.state.city + "," + this.state.state;
         
