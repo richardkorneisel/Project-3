@@ -16,7 +16,7 @@ export default function ResultCard(props) {
 
   return (
     <Card style={{width: '18rem' }} className='ResultCard' key={props.index}>
-      <Card.Body>
+      <Card.Body className='flex-column d-flex'>
           <Card.Title>{address.Title}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{distance} mi</Card.Subtitle>
           <Card.Text>
@@ -26,7 +26,7 @@ export default function ResultCard(props) {
               </div>
               <p className='notes'>{address.AccessComments}</p>
           </Card.Text>
-          <Button variant="primary" className='button'>
+          <Button variant="success" className='button mt-auto'>
             <Link to={`/${address.ID}`} className='buttonLink'>Details</Link>
           </Button>{' '}
       </Card.Body>
