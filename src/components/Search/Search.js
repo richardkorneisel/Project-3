@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 export default class Search extends Component {
     render() {
-        console.log('search this.props:', this.props)
         return (
             <div className='Search'>
                 <h2>Station Search</h2>
@@ -26,7 +25,7 @@ export default class Search extends Component {
                         </div>
 
                         <div className='searchTitle'>
-                            <p>Enter distance</p>
+                            <p>Enter distance (mi)</p>
                             <input type='integer' placeholder="25" onChange={this.props.addDistance} />
                         </div>
                         <br/>
@@ -53,7 +52,7 @@ export default class Search extends Component {
                             <input type='integer' placeholder={this.props.lon} onChange={this.props.addLon} />
                         </div>
                         <div className='searchTitle'>
-                            <p>Enter distance</p>
+                            <p>Enter distance (mi)</p>
                             <input type='integer' placeholder={this.props.distance} onChange={this.props.addDistance} />
                         </div>
                     </div>
