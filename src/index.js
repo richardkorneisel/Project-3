@@ -6,11 +6,11 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import data from './data/citydata.js'
+
 
 ReactDOM.render(
   <Router>
-    <App data={data}/>
+    <App />
   </Router>,
   document.getElementById('root')
 );
