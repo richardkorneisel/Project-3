@@ -16,9 +16,9 @@
 .Search {
     display: flex;
     flex-direction: column;
-    padding: 110px 0  40px 40px;
+    padding: 110px 0px 40px 0px;
     margin: 0 auto;
-    width: 820px;
+    width: 780px;
 }
 
 .Search .searchWindow {
@@ -41,7 +41,7 @@
 @media (max-width: 850px) {
 
     .Search {
-        width: 375px;
+        width: 360px;
     }
     .Search .searchContainer {
         display: flex;

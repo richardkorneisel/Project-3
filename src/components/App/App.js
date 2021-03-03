@@ -110,7 +110,7 @@ export default class App extends Component {
           }>
           </Route>
           <Route path="/aboutus" component={AboutUs} />
-          <Route path='/detail/:id' render={routerProps => 
+          <Route path='/:id' render={routerProps => 
             <Detail {...routerProps} results={this.state.results} /> 
           } />
         </Switch>
