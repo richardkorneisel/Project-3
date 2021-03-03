@@ -45,7 +45,7 @@ export default function Detail(props) {
             <p>Charging Level: {connections.LevelID}</p>
             <p>Volts: {connections.Voltage}</p>
             <p>Amps: {connections.Amps}</p>
-            <p>Power (KW): {connections.PowerKW}</p>
+            <p>Power: {connections.PowerKW} KW</p>
           </div>
       <Link to='/'>
       <Button variant="secondary">

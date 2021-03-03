@@ -1,12 +1,12 @@
 .ResultCards {
-  background-color: darkgray;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   margin: 0 auto;
   width: 90%;
 }
 
 .ResultsList h1 {
   font-size: 30px;
-  padding: 0 0  10px 40px;
+  text-align: center;
 }

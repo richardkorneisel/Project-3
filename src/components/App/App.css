@@ -5,6 +5,7 @@
   left: 0;
   height: 1.0in;
   background-color: black;
+  z-index: 1;
 }
 a{
   text-decoration: none;

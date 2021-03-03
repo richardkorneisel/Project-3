@@ -1,5 +1,7 @@
 import './ResultCard.css';
 import { Link } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
 
 export default function ResultCard(props) {
 
@@ -13,21 +15,21 @@ export default function ResultCard(props) {
   // console.log('distance', distance)
 
   return (
-    <div className='ResultCard' key={address.ID}>
-      <h2 className='title'>{address.Title}</h2>
-      <div className='address'>
-        <p>{address.AddressLine1}</p>
-        <p>{address.Town}</p>
-        <p>{address.StateOrProvince}</p>
-        <p>{address.Postcode}</p>
-      </div>
-      <div className='details'>
-        <p>Distance: {distance} mi</p>
-        <p>Notes: {address.AccessComments}</p>
-      </div>
-      <Link to={`/detail/${address.ID}`}>
-        <h3 className='button'>Details</h3>
-      </Link>
-    </div>
+    <Card style={{width: '18rem' }} className='ResultCard' key={props.index}>
+      <Card.Body>
+          <Card.Title>{address.Title}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{distance} mi</Card.Subtitle>
+          <Card.Text>
+            <div className='address'>
+              <p>{address.AddressLine1}</p>
+              <p>{address.Town} {address.StateOrProvince}, {address.Postcode}</p>
+              </div>
+              <p className='notes'>{address.AccessComments}</p>
+          </Card.Text>
+          <Button variant="primary" className='button'>
+            <Link to={`/${address.ID}`} className='buttonLink'>Details</Link>
+          </Button>{' '}
+      </Card.Body>
+    </Card>
   )
 }
