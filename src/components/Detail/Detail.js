@@ -28,20 +28,18 @@ export default function Detail(props) {
         <div>
           <h2 className='title'>{address.Title}</h2>
           <div className='address'>
-            <h3>Address</h3>
+            <h5>Address</h5>
             <p>{address.AddressLine1}</p>
-            <p>{address.Town}</p>
-            <p>{address.StateOrProvince}</p>
-            <p>{address.Postcode}</p>
+            <p>{address.Town}, {address.StateOrProvince} {address.Postcode}</p>
           </div>
           <div className='details'>
-            <h3>Notes</h3>
+            <h5>Notes</h5>
             <p>Distance: {distance} mi</p>
             <p>{address.AccessComments}</p>
             <p>{stationData.GeneralComments}</p>
           </div>
-          <div className=''>
-            <h3>Charging Details</h3>
+          <div className='charge'>
+            <h5>Charging Details</h5>
             <p>Number of Chargers: {connections.Quantity}</p>
             <p>Charging Level: {connections.LevelID}</p>
             <p>Volts: {connections.Voltage}</p>
@@ -49,7 +47,7 @@ export default function Detail(props) {
             <p>Power (KW): {connections.PowerKW}</p>
           </div>
       <Link to='/'>
-        <h3 className='button'>Back to Results</h3>
+        <h5 className="button">Back to Results</h5>
       </Link>
         </div>
       : null }
