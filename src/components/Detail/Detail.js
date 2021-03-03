@@ -43,13 +43,13 @@ export default function Detail(props) {
             <p>Amps: {connections.Amps}</p>
             <p>Power: {connections.PowerKW} KW</p>
           </div>
+        </div>
+      : null }
       <Link to='/'>
       <Button variant="secondary">
         <h5 className="button">Back to Results</h5>
       </Button>
       </Link>
-        </div>
-      : null }
     </div>
   )
 }
