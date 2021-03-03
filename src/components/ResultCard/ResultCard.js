@@ -5,14 +5,8 @@ import Button from 'react-bootstrap/Button'
 
 export default function ResultCard(props) {
 
-  // console.log('result props.value', props.value)
-  // console.log('result props.index', props.index)
-
   const address = props.value.AddressInfo;
-
   const distance = (Math.round(address.Distance * 10) / 10).toFixed(1);
-
-  // console.log('distance', distance)
 
   return (
     <Card style={{width: '18rem' }} className='ResultCard' key={props.index}>

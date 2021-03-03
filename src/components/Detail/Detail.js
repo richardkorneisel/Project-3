@@ -4,14 +4,10 @@ import Button from 'react-bootstrap/Button';
 
 export default function Detail(props) {
   
-  console.log('detail props:', props)
-
   let stationId = props.match.params.id;
   let stationData = props.results.find(value => 
     value.AddressInfo.ID == stationId
   )
-
-  console.log('stationData:', stationData) 
 
   let address = {};
   let distance = "";

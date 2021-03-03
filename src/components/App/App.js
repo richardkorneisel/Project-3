@@ -26,35 +26,30 @@ export default class App extends Component {
     this.setState({
       lat: event.target.value
     })
-    // console.log('lat:', this.state.lat)
   }
   
   addLon = (event) => {
     this.setState({
       lon: event.target.value
     })
-    // console.log('lon:', this.state.lon)
   }
   
   addDistance = (event) => {
     this.setState({
       distance: event.target.value
     })
-    // console.log('distance:', this.state.distance)
   }
 
   addCity = (event) => {
     this.setState({
       city: event.target.value
     })
-    //  console.log('city:', this.state.city)
   }
 
   addState = (event) => {
     this.setState({
       state: event.target.value
     })
-    //  console.log('state:', this.state.state)
   }
 
 
@@ -77,7 +72,6 @@ export default class App extends Component {
     let locationVar = '&location=' + this.state.city + "," + this.state.state;
         
     let response = await axios.get(baseUrl + keyVar + locationVar)
-    console.log('Location response', response)
 
     this.setState({
       lat: response.data.results[0].locations[0].latLng.lat,

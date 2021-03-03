@@ -3,8 +3,6 @@ import ResultCard from '../ResultCard/ResultCard'
 
 export default function ResultsList(props) {
 
-    // console.log('ResultsList props', props)
-
     let resultCards = props.results.map((value, index) => {
         return (
             <ResultCard value={value} index={index} />
