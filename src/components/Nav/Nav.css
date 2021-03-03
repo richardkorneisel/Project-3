@@ -6,3 +6,11 @@
 .nav p {
     font-size: 15px;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}

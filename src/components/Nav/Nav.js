@@ -6,7 +6,7 @@ function Nav() {
     return (
 
         <div className='nav'>
-            <p><a href="AboutUs">About Us</a></p>
+            <p><b><a href="AboutUs">About Us</a></b></p>
         </div>
     );
 }
