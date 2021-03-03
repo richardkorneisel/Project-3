@@ -21,6 +21,12 @@ If the user wishes to return to the homepage, at any time, they can click on the
 - React
 - React Router
 - Axios
+- JSX
+- React Bootstrap
+
+### Deployed App
+
+[charging-locator-application](https://charging-locator-application.herokuapp.com/)
 
 ### API
 
@@ -37,12 +43,14 @@ If the user wishes to return to the homepage, at any time, they can click on the
         - Search
         - Results
             - ResultsList    
-                - Result
+                - ResultCard
+    - Detail 
     - About Us
 
-### User Stories
+### User Stories and Wireframe
 
 [See User Stories Here](/planning/user-stories.md)
+[See Initial Wireframe](/planning/wireframe1.jpg)
 
 
 ### Future Improvements
